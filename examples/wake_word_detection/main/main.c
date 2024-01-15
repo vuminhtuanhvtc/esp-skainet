@@ -91,9 +91,9 @@ void app_main()
     afe_config.wakenet_model_name = wn_name;
     afe_config.voice_communication_init = false;
 
-#if defined CONFIG_ESP32_S3_BOX_BOARD || defined CONFIG_ESP32_S3_EYE_BOARD
+#if defined CONFIG_ESP32_S3_BOX_BOARD || defined CONFIG_ESP32_S3_EYE_BOARD || CONFIG_ESP32_S3_DEVKIT_C
     afe_config.aec_init = false;
-    #if defined CONFIG_ESP32_S3_EYE_BOARD
+    #if defined CONFIG_ESP32_S3_EYE_BOARD || CONFIG_ESP32_S3_DEVKIT_C
         afe_config.pcm_config.total_ch_num = 2;
         afe_config.pcm_config.mic_num = 1;
         afe_config.pcm_config.ref_num = 1;
